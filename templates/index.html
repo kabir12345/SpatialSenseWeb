@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/main.css">
+    
+    <title>Spatial Sense</title>
+</head>
+<body>
+    <h1>Spatial Sense</h1>
+    <div class="container">
+        <video id="videoInput" width="640" height="480" autoplay></video>
+        <img id="depthMap" width="640" height="480">
+    </div>
+    <textarea id="log" rows="4" cols="50" readonly></textarea>
+    <script>
+        const videoInput = document.getElementById('videoInput');
+        const depthMap = document.getElementById('depthMap');
+        const log = document.getElementById('log');
+        const promptPath = "prompt/prompt.yml"
+
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(stream => {
+                videoInput.srcObject = stream;
+                processVideo();
+            });
+
+        function processVideo() {
+            const canvas = document.createElement('canvas');
+            canvas.width = videoInput.width;
+            canvas.height = videoInput.height;
+            const ctx = canvas.getContext('2d');
+
+            setInterval(() => {
+                ctx.drawImage(videoInput, 0, 0, canvas.width, canvas.height);
+                const imageData = canvas.toDataURL('image/jpeg');
+
+                fetch('/process', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        image: imageData,
+                        prompt_path: promptPath.value  // Include the prompt path in the request
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    depthMap.src = 'data:image/jpeg;base64,' + data.depth_map;
+                    // Updating log with response message and timestamp
+                    log.value += data.message + ' - Updated at: ' + new Date().toLocaleTimeString() + '\n';
+                });
+            }, 5000);  // Update every 5 seconds
+        }
+    </script> 
+</body>
+</html>

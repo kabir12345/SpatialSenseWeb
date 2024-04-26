@@ -1,0 +1,41 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: #fff; /* or any color of choice */
+}
+
+h1 {
+    text-align: center; /* Center-align the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.container {
+    display: flex; /* Use flexbox for side-by-side videos */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#videoInput, #depthMap {
+    /* Ensure these are the same width if they are to be displayed side by side */
+    width: 320px; /* Fixed width for individual videos */
+    height: 240px; /* Fixed height */
+    border: 1px solid #ddd; /* Optional border */
+    margin: 10px; /* Margin around each for spacing */
+}
+
+#log {
+    width: 640px; /* Adjust the width */
+    height: 100px; /* Fixed height */
+    overflow-y: scroll; /* Makes it scrollable */
+    border: none; /* Removes border */
+    background: #f9f9f9; /* Light grey background */
+    padding: 10px;
+    box-sizing: border-box;
+    resize: none; /* Prevent resizing */
+}
