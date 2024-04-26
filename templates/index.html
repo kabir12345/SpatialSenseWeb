@@ -8,12 +8,40 @@
     <title>Spatial Sense</title>
 </head>
 <body>
-    <h1>Spatial Sense</h1>
+    <h1>Spatial Sense <a href="https://github.com/kabir12345/SpatialSenseWeb" style="color: blue;"><i>[Github] </i></a></h1>
+    <p><i> Usings On-device large language model and depth anything model to help navigate indoor environments. </i></p><br>
+    <p> Project By: <b> Kabir Jaiswal</b> </p>
+    <p><i>Tandon Schoolof Engineering, New York University</i></p><br>
+    <p> Advised By: <b> Prof. Sundeep Rangan</b> </p>
+    <p><i>Tandon Schoolof Engineering, New York University</i></p><br>
+
+    <div style="display: flex; align-items: flex-start; width: 100%; padding-left: 200px;">
+        <p style="margin-top: 10px; font-weight: bolder; font-size: 20px; padding-bottom: 20px;">Abstract</p>
+    </div>
+    <p style="padding-left: 100px; padding-right: 100px; text-align: justify; padding-bottom: 30px;;">In this project, we introduce Spatial Sense, an innovative system designed to assist in indoor navigation through the integration of on-device large language models (llava:7b-v1.5-q2_K) and state-of-the-art Monocular Depth Estimation Models (Depth Anything Model) and Metric Depth Estimation Models (Zoe Depth)  . Leveraging the "depth-anything" model hosted on Hugging Face and a large language model from Ollama, our system processes real-time video feeds to generate detailed depth maps and contextually relevant textual feedback. The core functionality, implemented using a Flask web application, allows users to input live video data which is then processed to estimate depth information dynamically. The depth data is enhanced for visual interpretation and interacted with a conversational model that provides guidance or information based on the scene’s spatial layout. This approach not only enriches the user interaction with environmental understanding but also paves the way for more intuitive navigation aids in complex indoor settings. Our results demonstrate the potential of combining deep learning for visual processing and natural language processing to create a more interactive and responsive navigation system. Spatial Sense aims to be a stepping stone towards more sophisticated aids for visually impaired individuals and robotic navigation systems.</p>
+
     <div class="container">
         <video id="videoInput" width="640" height="480" autoplay></video>
         <img id="depthMap" width="640" height="480">
     </div>
-    <textarea id="log" rows="4" cols="50" readonly></textarea>
+    <textarea id="log" rows="4" cols="50" style="padding-bottom: 50px;" readonly></textarea>
+    
+    <div style="display: flex; align-items: flex-start; width: 100%; padding-left: 200px;">
+        <p style="margin-top: 10px; font-weight: bolder; font-size: 20px; padding-bottom: 20px;">References</p>
+    </div>
+    <p style="padding-left: 100px; padding-right: 100px; text-align: justify; padding-bottom: 30px;;">
+    Bhat, S. F., Birkl, R., Wofk, D., Wonka, P., & Müller, M. (2023). ZoeDepth: Zero-shot transfer by combining relative and metric depth. arXiv. https://arxiv.org/abs/2302.12288
+        <br>
+        <br>
+    Yang, L., Kang, B., Huang, Z., Xu, X., Feng, J., & Zhao, H. (2024). Depth anything: Unleashing the power of large-scale unlabeled data. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR).
+        <br>
+        <br>
+    Liu, H., Li, C., Wu, Q., & Lee, Y. J. (2023). Visual instruction tuning. In Proceedings of the Neural Information Processing Systems Conference (NeurIPS).
+
+
+        
+    </p>
+
     <script>
         const videoInput = document.getElementById('videoInput');
         const depthMap = document.getElementById('depthMap');

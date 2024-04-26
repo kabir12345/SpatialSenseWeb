@@ -108,7 +108,7 @@ def load_zoedepth_model(model_name='ZoeD_N', source='local'):
 def predict_depth(image_path, model, DEVICE):
     # Load and preprocess the image
     image = Image.open(image_path).convert("RGB")
-
+    tensor_image=image
     # Predict depth
     with torch.no_grad():  # Inference only, no gradients needed
         depth_tensor = model.infer(tensor_image)
@@ -141,4 +141,4 @@ def interact_with_llm(image, depth_map, prompt_path:str):
     return response['message']['content']
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5003)
+    app.run(debug=True, port=5001)
