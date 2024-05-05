@@ -27,7 +27,7 @@ The Spatial Sense repository includes directories and files critical for the pro
 - `app.py`: The Flask application entry point.
 - `requirements.txt`: Lists all the Python libraries that the project depends on.
 - `index.html`: Contains the front-end user interface for interacting with the Spatial Sense system.
-- `static/`: Stores static files like CSS and JavaScript that enhance the front-end.
+- `static/`: Stores static files like CSS and JavaScript that enhance the front end.
 - `templates/`: Contains HTML templates used by Flask to render the UI.
   
 ## Steps to Reproduce the Code and Run It
@@ -35,6 +35,7 @@ The Spatial Sense repository includes directories and files critical for the pro
 2. Install dependencies listed in `requirements.txt` using `pip install -r requirements.txt`.
 3. Run `app.py` to start the Flask server.
 4. Open a browser and navigate to `http://localhost:5000/` to interact with the application.
+
 
 ## Results
 The application processes real-time video feeds to generate depth maps and textual feedback, demonstrating the effectiveness of combining visual processing and NLP for indoor navigation.
@@ -44,10 +45,4 @@ The application processes real-time video feeds to generate depth maps and textu
 - `requirements.txt`: Specifies the necessary libraries for ensuring environment parity.
 - `index.html`: Hosts the user interface, allowing real-time video input and displaying results.
 
-(Insert project page screenshot here)
-
-For a complete guide and detailed instructions, refer to the `README.md` file in the repository. 
-
----
-
-Note: This is a skeleton of the README.md file tailored to the information provided. Further details like installation instructions, usage examples, and contribution guidelines should be added based on the actual content and requirements of the project.
+<img width="1502" alt="Screenshot 2024-05-05 at 11 46 30 AM" src="https://github.com/kabir12345/SpatialSenseWeb/assets/18241637/2a6dac8d-3fbf-437c-9956-6a031a2cc367">
