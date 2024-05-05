@@ -7,19 +7,20 @@ Transformers are neural network architectures that revolutionized natural langua
 
 ### Transformers Architecture
 ![Transformers Architecture](https://github.com/kabir12345/LLM-PEFT-Optimization/blob/main/static/transformers.png)
-#### GPT-2
-OpenAI's GPT-2 is a transformer-based model with a layered architecture comprising 12 to 48 transformer blocks, with parameters ranging from 117 million
+### LLaMa
 
-to 1.5 billion, depending on the variant. Its multi-headed self-attention and fully connected layers generate coherent and contextually relevant text, facilitating various NLP tasks.
+Meta AI's LLaMa (Large Language Model Meta AI) is a series of foundation language models ranging from 7 billion to 65 billion parameters.  LLaMa's architecture is based on the Transformer architecture, known for its efficiency in handling sequential data in natural language processing tasks.  These models are notable for comparable performance to larger counterparts while requiring significantly fewer parameters and computational resources.
 
-#### T5-Small
-Google's T5, or Text-to-Text Transfer Transformer, frames NLP tasks as text-to-text problems. The T5-Small variant, with 60 million parameters and 6 layers in its encoder-decoder structure, efficiently performs tasks like translation, summarization, and question-answering.
+### LLM Quantization
 
-#### LORA
-Low-Rank Adaptation (LORA) is a technique to fine-tune large language models efficiently, by introducing a small set of additional parameters to approximate changes to the original weights, reducing trainable parameters and computational resources.
+LLM quantization is a technique for compressing large language models to reduce their memory footprint and increase computational efficiency. The core idea is to represent the weights within the model using lower-precision data types instead of the standard 32-bit floating-point format. This can dramatically reduce model size without significantly sacrificing performance.
 
-#### IA3
-Infused Adapter by Inhibiting and Amplifying Inner Activations (IA3) optimizes language models by selectively inhibiting or amplifying activations within layers for better performance and computational efficiency.
+### 4-Bit Quantization
+
+4-bit quantization is a specific type of quantization where model weights are represented using only 4 bits (half a byte). This offers a substantial compression advantage: in theory, a model quantized to 4 bits could be up to 8 times smaller than its 32-bit counterpart. However, 4-bit quantization requires careful implementation to avoid significant performance degradation.  Techniques include:
+
+- Mixed-Precision: Storing a small number of the most important weights in higher precision while quantizing the majority to 4-bits.
+- Quantization-Aware Training: Training the model with quantization in mind, minimizing accuracy loss when switching to lower precision.
 
 ## Code Structure
 The Spatial Sense repository includes directories and files critical for the project's setup and execution.
