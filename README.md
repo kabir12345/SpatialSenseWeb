@@ -5,8 +5,6 @@
 ### Transformers
 Transformers are neural network architectures that revolutionized natural language processing (NLP). The seminal paper, "Attention Is All You Need" by Vaswani et al., introduced this architecture, which is distinguished by self-attention mechanisms. These mechanisms enable the model to process data in parallel and capture complex word relationships, boosting performance in machine translation, text generation, and understanding.
 
-### Transformers Architecture
-![Transformers Architecture](https://github.com/kabir12345/LLM-PEFT-Optimization/blob/main/static/transformers.png)
 ### LLaMa
 
 Meta AI's LLaMa (Large Language Model Meta AI) is a series of foundation language models ranging from 7 billion to 65 billion parameters.  LLaMa's architecture is based on the Transformer architecture, known for its efficiency in handling sequential data in natural language processing tasks.  These models are notable for comparable performance to larger counterparts while requiring significantly fewer parameters and computational resources.
