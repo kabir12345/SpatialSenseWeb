@@ -47,3 +47,9 @@ The application processes real-time video feeds to generate depth maps and textu
 - `index.html`: Hosts the user interface, allowing real-time video input and displaying results.
 
 <img width="1502" alt="Screenshot 2024-05-05 at 11 46 30 AM" src="https://github.com/kabir12345/SpatialSenseWeb/assets/18241637/2a6dac8d-3fbf-437c-9956-6a031a2cc367">
+
+## References
+
+  Bhat, S. F., Birkl, R., Wofk, D., Wonka, P., & Müller, M. (2023). ZoeDepth: Zero-shot transfer by combining relative and metric depth. arXiv. https://arxiv.org/abs/2302.12288
+  Yang, L., Kang, B., Huang, Z., Xu, X., Feng, J., & Zhao, H. (2024). Depth anything: Unleashing the power of large-scale unlabeled data. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR).
+  Liu, H., Li, C., Wu, Q., & Lee, Y. J. (2023). Visual instruction tuning. In Proceedings of the Neural Information Processing Systems Conference (NeurIPS).
